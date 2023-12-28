@@ -1,4 +1,3 @@
-
 .tabBarContainer {
   height: 83px;
 
@@ -46,7 +45,7 @@
 
         .ant-tabs-tab-active {
           background: var(--bg-active-tab);
-           /* background: #000; */
+          /* background: #000; */
         }
       }
     }

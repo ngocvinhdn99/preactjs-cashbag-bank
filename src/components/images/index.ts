@@ -5,6 +5,7 @@ import RcIconWithdraw from "./icon-withdraw";
 import RcIconCash from "./icon-cash";
 import RcIconInfoRegular from "./icon-info-regular";
 import RcIconPendingCash from "./icon-pending-cash";
+import RcIconNextGrey from "./icon-next-grey";
 
 export {
   RcIconBag,
@@ -14,4 +15,5 @@ export {
   RcIconCash,
   RcIconInfoRegular,
   RcIconPendingCash,
+  RcIconNextGrey,
 };

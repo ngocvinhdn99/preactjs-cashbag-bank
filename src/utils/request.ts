@@ -101,15 +101,7 @@ function processOptions(options: any, type?: string) {
   const deviceId = localStorage.getItem(AppConst.localStorage.deviceId);
 
   if (deviceId) {
-    if (type === "chatUploadEndPoint") {
-      options.headers[`DeviceId`] = deviceId;
-    } else {
-      options.headers[`Device-ID`] = deviceId;
-    }
-  }
-
-  if (type === "chatEndPoint") {
-    options.headers["X-Token"] = "ewogICAgInVzZXJUeXBlIjogInN0YWZmIgp9";
+    options.headers[`Device-ID`] = deviceId;
   }
 
   if (token) {

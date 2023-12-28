@@ -13,7 +13,7 @@ interface IApi {
 }
 
 const endpointType = {
-  mainEndpoint: "https://admin-api.unibag.xyz",
+  mainEndpoint: "https://svc.devatcashback.com/api",
   fakeServer: "http://localhost:4000",
 };
 
@@ -21,12 +21,26 @@ const themeColor = {
   get: (): IApi => ({
     url: `/theme-color`,
     method: methods.get,
-    type: 'fakeServer',
+    type: "fakeServer",
   }),
   getBankTheme: (): IApi => ({
     url: `/bank-theme`,
     method: methods.get,
-    type: 'fakeServer',
+    type: "fakeServer",
+  }),
+};
+
+const transaction = {
+  getList: (): IApi => ({
+    url: `/transaction`,
+    method: methods.get,
+  }),
+};
+
+const withdraw = {
+  getList: (): IApi => ({
+    url: `/withdraw`,
+    method: methods.get,
   }),
 };
 
@@ -34,4 +48,6 @@ export default {
   methods,
   endpointType,
   themeColor,
+  transaction,
+  withdraw,
 };

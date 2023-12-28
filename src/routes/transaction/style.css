@@ -1,0 +1,23 @@
+.brandLogoContainer {
+  flex-basis: 80px;
+  padding: 10px 20px;
+
+  display: flex;
+  align-items: center;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.transactionInfoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  color: #2b2e2c;
+
+  padding: 24px 0;
+  border-bottom: 1px solid #f2f1f2;
+}
