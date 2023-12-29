@@ -15,3 +15,8 @@ export interface ICommonFilter {
   status?: string;
   pageToken?: string;
 }
+
+export interface ISelectOption {
+  _id: string;
+  name: string;
+}

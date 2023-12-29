@@ -1,5 +1,5 @@
-import { ApiConst } from "../configs";
-import { request } from "../utils";
+import { ApiConst } from "src/configs";
+import { request } from "src/utils";
 
 const get = (query) => {
   const api = ApiConst.themeColor.get();

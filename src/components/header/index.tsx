@@ -1,30 +1,18 @@
 import { h } from "preact";
-import { Link } from "preact-router/match";
-import style from "./style.css";
+import { signalTheme } from "src/signals";
 
-const Header = () => (
-  <header class={style.header}>
-    <a href="/" class={style.logo}>
-      <img
-        src="../../assets/preact-logo-inverse.svg"
-        alt="Preact Logo"
-        height="32"
-        width="32"
-      />
-      <h1>Preact CLI</h1>
-    </a>
-    <nav>
-      <Link activeClassName={style.active} href="/">
-        Home
-      </Link>
-      <Link activeClassName={style.active} href="/profile">
-        Me
-      </Link>
-      <Link activeClassName={style.active} href="/profile/john">
-        John
-      </Link>
-    </nav>
-  </header>
-);
+const Header = () => {
+  return (
+    <div
+      className="bg-white px-5 flex justify-center items-center fixed top-0 left-0 right-0"
+      style={{
+        height: signalTheme.signalInfo.value.sizes.headerHeight,
+        borderBottom: "1px solid #f5f5f5",
+      }}
+    >
+      <span className="text-base font-semibold">Mua sắm hoàn tiền</span>
+    </div>
+  );
+};
 
 export default Header;

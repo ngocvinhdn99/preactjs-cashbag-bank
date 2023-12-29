@@ -1,8 +1,8 @@
 import { h } from "preact";
 import { useMemo } from "preact/hooks";
-import { AppConst } from "../../../configs";
-import { IWithdraw } from "../../../interfaces";
-import { format } from "../../../utils";
+import { AppConst } from "src/configs";
+import { IWithdraw } from "src/interfaces";
+import { format } from "src/utils";
 
 interface IProps {
   item: IWithdraw;
@@ -28,7 +28,7 @@ function WithdrawItem(props: IProps) {
   const statusColorClassName: string = useMemo(() => {
     switch (item?.status) {
       case success:
-        return "color-primary";
+        return "color-success";
       case pending:
         return "color-pending";
       case rejected:

@@ -1,44 +1,45 @@
-import { IRoute } from "../interfaces";
-import BrandNew from "../routes/brand-new";
-import Home from "../routes/home";
-import Profile from "../routes/profile";
-import Reducer from "../routes/reducer";
-import Support from "../routes/support";
-import Transaction from "../routes/transaction";
-import Withdraw from "../routes/withdraw";
+import { IRoute } from "src/interfaces";
+
+import RouteBrandNew from "src/routes/brand-new";
+import RouteHome from "src/routes/home";
+import RouteProfile from "src/routes/profile";
+import RouterReducer from "src/routes/reducer";
+import RouteSupport from "src/routes/support";
+import RouteTransaction from "src/routes/transaction";
+import RouteWithdraw from "src/routes/withdraw";
 
 const routes: IRoute[] = [
   {
     path: "/",
-    component: Home,
+    component: RouteHome,
   },
   {
     path: "/profile",
-    component: Profile,
+    component: RouteProfile,
   },
   {
     path: "/profile/:user",
-    component: Profile,
+    component: RouteProfile,
   },
   {
     path: "/reducer",
-    component: Reducer,
+    component: RouterReducer,
   },
   {
     path: "/brand-new",
-    component: BrandNew,
+    component: RouteBrandNew,
   },
   {
     path: "/support",
-    component: Support,
+    component: RouteSupport,
   },
   {
     path: "/transaction",
-    component: Transaction,
+    component: RouteTransaction,
   },
   {
     path: "/withdraw",
-    component: Withdraw,
+    component: RouteWithdraw,
   },
 ];
 

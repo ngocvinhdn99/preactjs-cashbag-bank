@@ -1,0 +1,36 @@
+.radioInputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--white);
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  font-size: 14px;
+
+  border-radius: 1rem;
+
+  .radio {
+    flex: 1;
+    text-align: center;
+  }
+  .radio input {
+    display: none;
+  }
+
+  .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .radio input:checked + .name {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+  }
+}

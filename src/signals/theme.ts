@@ -1,6 +1,6 @@
 import { signal } from "@preact/signals";
-import { IBankTheme } from "../interfaces";
-import { serviceThemeColor } from "../services";
+import { IBankTheme } from "src/interfaces";
+import { serviceThemeColor } from "src/services";
 
 const signalInfo = signal<IBankTheme>({
   colors: {

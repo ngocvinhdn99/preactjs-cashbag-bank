@@ -1,7 +1,12 @@
 export default {
-  open_nutifood: "open_nutifood",
   shopping: 'shopping',
   transaction: 'transaction',
   withdraw: 'withdraw',
   support: 'support',
+
+  transactionStatus: {
+    pending: 'transactionStatus.pending',
+    cashback: 'transactionStatus.cashback',
+    rejected: 'transactionStatus.rejected',
+  },
 };

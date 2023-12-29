@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-syntax */
 // import { ApiConst, AppConst } from "@/configs";
 import { route } from "preact-router";
-import { ApiConst, AppConst } from "../configs";
+import { ApiConst, AppConst } from "src/configs";
 
 export interface RequestOptions {
   method?: string;

@@ -3,9 +3,9 @@ import {
   RcIconCash,
   RcIconPendingCash,
   RcIconWithdraw,
-} from "../../../components/images";
-import { signalTheme } from "../../../signals";
-import { format } from "../../../utils";
+} from "src/components/images";
+import { signalTheme } from "src/signals";
+import { format } from "src/utils";
 
 function UserCashInfo() {
   const { white: whiteColor, primary: primaryColor } =

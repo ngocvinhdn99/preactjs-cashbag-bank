@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { useMemo } from "preact/hooks";
-import { format } from "../../../utils";
+import { format } from "src/utils";
 
 function TransactionStatistic() {
   const explainedContent = () => (
@@ -54,8 +54,8 @@ function TransactionStatistic() {
       <h3 className="text-sm font-semibold m-0">Thống kê</h3>
       {statisticList.map((s) => (
         <div className="flex justify-between">
-          <h3 className="text-xs font-semibold m-0">{s.label}</h3>
-          <span className="text-xs font-semibold color-primary">{s.value}</span>
+          <h3 className="text-sm font-semibold m-0">{s.label}</h3>
+          <span className="text-sm font-semibold color-primary">{s.value}</span>
         </div>
       ))}
     </div>

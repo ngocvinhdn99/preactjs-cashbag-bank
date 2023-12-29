@@ -2,12 +2,12 @@
 
 import { Fragment, h } from "preact";
 import { useEffect } from "preact/hooks";
+import { GlobalStyles } from "src/configs/theme";
+import { signalTheme } from "src/signals";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../configs/theme";
-import { signalTheme } from "../signals";
-import BottomFooter from "./bottom-footer";
-import Header from "./header-new";
 import RouterContainer from "./router";
+import BottomFooter from "src/components/bottom-footer";
+import Header from "src/components/header";
 
 const App = () => {
   const themeValue = signalTheme.signalInfo.value;

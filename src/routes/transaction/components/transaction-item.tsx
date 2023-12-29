@@ -1,10 +1,10 @@
 import { h } from "preact";
 import { useMemo } from "preact/hooks";
-import { RcIconNextGrey } from "../../../components/images";
-import { AppConst } from "../../../configs";
-import { ITransaction } from "../../../interfaces";
-import { format, helper } from "../../../utils";
-import styles from "../style.css";
+import styles from "../style.less";
+import { ITransaction } from "src/interfaces";
+import { AppConst } from "src/configs";
+import { format, helper } from "src/utils";
+import { RcIconNextGrey } from "src/components/images";
 
 interface IProps {
   item: ITransaction;
@@ -47,17 +47,19 @@ function TransactionItem(props: IProps) {
       </div>
 
       <div className={styles.transactionInfoContainer}>
-        <span>Giá trị: {format.cashValue(item.value)}</span>
-        <span>Ngày mua: {format.dateWithNoHour(item.buy)}</span>
-        <span className={statusColorClassName}>
-          {cashbackTitle}
-          {item.status !== "rejected" &&
-            `: ${format.cashValue(item.commission)}`}
-        </span>
-      </div>
+        <div className="flex flex-col gap-1 text-sm">
+          <span>Giá trị: {format.cashValue(item.value)}</span>
+          <span>Ngày mua: {format.dateWithNoHour(item.buy)}</span>
+          <span className={statusColorClassName}>
+            {cashbackTitle}
+            {item.status !== "rejected" &&
+              `: ${format.cashValue(item.commission)}`}
+          </span>
+        </div>
 
-      <div className="px-5">
-        <RcIconNextGrey />
+        <div className="px-5">
+          <RcIconNextGrey />
+        </div>
       </div>
     </div>
   );

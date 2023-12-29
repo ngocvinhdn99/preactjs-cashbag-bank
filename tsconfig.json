@@ -11,11 +11,11 @@
 		"allowJs": true,
 		"checkJs": true,
 		"skipLibCheck": true,
-		// "baseUrl": "./",
+		"baseUrl": "./",
 		"paths": {
 			"react": ["./node_modules/preact/compat"],
 			"react-dom": ["./node_modules/preact/compat"]
 		}
 	},
-	"include": ["src/**/*"]
+	"include": ["src/**/*", "preact.config.js"]
 }

@@ -1,20 +1,26 @@
 import { signal } from "@preact/signals";
-import { ICommonFilter, IWithdraw } from "../interfaces";
-import { serviceWithdraw } from "../services";
+import { ICommonFilter, IWithdraw } from "src/interfaces";
+import { serviceWithdraw } from "src/services";
 
 const list = signal<IWithdraw[]>([]);
 const filter = signal<ICommonFilter>({ pageToken: "" });
+const isLoading = signal<boolean>(false);
 
-const actionGetList = async () => {
-  const response = await serviceWithdraw.getList(filter.value);
+const actionGetList = async (query) => {
+  isLoading.value = true;
+  const response = await serviceWithdraw.getList(query);
+  isLoading.value = false;
+
   const { data, success } = response.data;
 
   if (!success) return;
-  list.value = data?.list;
+
+  list.value = !!query?.pageToken ? [...list.value, ...data?.list] : data?.list;
+
   filter.value = {
-    ...filter.value,
+    ...query,
     pageToken: data?.nextPageToken,
   };
 };
 
-export default { list, filter, actionGetList };
+export default { list, filter, isLoading, actionGetList };

@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { Route, Router } from "preact-router";
-import { RoutesConst } from "../../configs";
+import { RoutesConst } from "src/configs";
 
 const RouterContainer = () => (
   <Router>

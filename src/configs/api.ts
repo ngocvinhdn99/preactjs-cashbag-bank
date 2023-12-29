@@ -13,7 +13,8 @@ interface IApi {
 }
 
 const endpointType = {
-  mainEndpoint: "https://svc.devatcashback.com/api",
+  // mainEndpoint: "https://svc.devatcashback.com/api",
+  mainEndpoint: "https://vpbank-svc.devatcashback.com/api",
   fakeServer: "http://localhost:4000",
 };
 

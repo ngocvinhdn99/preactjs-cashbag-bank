@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     --bg-active-tab: ${({ theme }) => theme?.colors?.bgActiveTab};
     --white: ${({ theme }) => theme?.colors?.white};
     --black-tab: #757575;
+    --success-color: #21AB56;
     --pending-color: #f2994a;
     --reject-color: #eb2d4b;
   }

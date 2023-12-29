@@ -3,7 +3,8 @@ import {
   RcIconOrder,
   RcIconSupport,
   RcIconWithdraw,
-} from "../components/images";
+} from "src/components/images";
+import { key } from "src/locales";
 
 const localStorage = {
   authToken: "authToken",
@@ -12,10 +13,15 @@ const localStorage = {
 
 const select = {
   tabBarList: [
-    { _id: "/brand-new", name: "Mua sắm", icon: RcIconBag },
-    { _id: "/transaction", name: "Đơn hàng", icon: RcIconOrder },
-    { _id: "/withdraw", name: "Rút tiền", icon: RcIconWithdraw },
-    { _id: "/support", name: "Hỗ trợ", icon: RcIconSupport },
+    { _id: "/brand-new", name: key.shopping, icon: RcIconBag },
+    { _id: "/transaction", name: key.transaction, icon: RcIconOrder },
+    { _id: "/withdraw", name: key.withdraw, icon: RcIconWithdraw },
+    { _id: "/support", name: key.withdraw, icon: RcIconSupport },
+  ],
+  transactionStatusFilter: [
+    { _id: "pending", name: key.transactionStatus.pending },
+    { _id: "cashback", name: key.transactionStatus.cashback },
+    { _id: "rejected", name: key.transactionStatus.rejected },
   ],
 };
 
